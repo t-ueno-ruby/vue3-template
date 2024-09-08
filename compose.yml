@@ -1,0 +1,19 @@
+# [Compose ファイル version 3 リファレンス — Docker-docs-ja 24.0 ドキュメント](https://docs.docker.jp/compose/compose-file/compose-file-v3.html#build)
+services:
+  frontend:
+    build:
+      context: ./
+      dockerfile: ./docker/frontend/Dockerfile
+    container_name: frontend
+    command: npm run dev
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+    ports:
+      - "5173:5173"
+  # TODO バックエンドを実装する
+  # backend:
+  #   build: .
+  #   dockerfile: ./docker/backend/Dockerfile
+  #   container_name: backend
