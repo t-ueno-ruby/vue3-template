@@ -2,12 +2,12 @@
 services:
   frontend:
     build:
-      context: ./
+      context: .
       dockerfile: ./docker/frontend/Dockerfile
     container_name: frontend
     command: npm run dev
     volumes:
-      - .:/app
+      - ./frontend:/app/frontend
     stdin_open: true
     tty: true
     ports:

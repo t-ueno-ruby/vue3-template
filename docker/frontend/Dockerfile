@@ -1,5 +1,5 @@
 FROM node:lts-slim
 
-WORKDIR /frontend
+WORKDIR /app/frontend
 
 RUN apt-get update
